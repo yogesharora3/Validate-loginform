@@ -170,7 +170,7 @@
     var regPass=/^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{7,15}$/;
      var x=document.forms['form']['pass'].value;
 
-     if(!regPass.test(x)  )
+     if( !(x.match(regPass) )
     {
         // alert("Your password must contain atleast [0-9],[A-Z],[a-z],[@#$%^&*].!!");
         document.getElementById('passerr').innerHTML="*Your password must contain atleast [0-9],[A-Z],[a-z],[@#$%^&].";
