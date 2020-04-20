@@ -167,19 +167,19 @@
    function mypass()
    {
 
-    var regPass=/^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{7,15}$/;
+    var regPass=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
      var x=document.forms['form']['pass'].value;
 
      if(!regPass.test(x)  )
     {
         // alert("Your password must contain atleast [0-9],[A-Z],[a-z],[@#$%^&*].!!");
-        document.getElementById('passerr').innerHTML="*Your password must contain atleast [0-9],[A-Z],[a-z],[@#$%^&].";
+        document.getElementById('passerr').innerHTML="**Your password must contain atleast [0-9],[A-Z],[a-z],[@#$%^&*].";
         return false;
     }
     else{
         document.getElementById('passerr').innerHTML="";
         return true;
-    }
+    }   
 }
  function mycpass(){
    
@@ -202,7 +202,7 @@
     }
 }
     function myemail(){
-var regEmail=/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
    
 
 var z=document.forms['form']['email'].value;
@@ -240,14 +240,6 @@ if(myemail())
     return false;
     
 }
-    
-   
-
-   
-
-
-   
-
     </script>
 
     </body>
